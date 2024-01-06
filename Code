@@ -1,0 +1,28 @@
+import random
+
+print("Welcome to Password Modifier. This tool improves your password's strength!")
+
+modifiers = {
+    'M4th$': 'Maths',
+    '#S@uce': 'SharpSauce',
+    '@De@dly': 'AtDeadly',
+    'Str1ng4': 'String4',
+    'D0tc0m': 'DotCom',
+    'Dyn0op': 'DynoOp',
+    'Dumb0$': 'Dumbos',
+    'Youtu8e<3': 'YoutubeHeart',
+    'C4t$': 'Cats',
+    'M4ster9': 'Master9'
+}
+
+while True:
+    password = input('Enter the password you want to modify: ')
+
+    prefix = random.choice(list(modifiers.keys()))
+    suffix = random.choice(list(modifiers.keys()))
+
+    newpass = prefix + password + suffix
+    print(f'Your modified password is: {newpass}')
+
+    print('Pronunciation of Modified Words:')
+    print(modifiers.get(prefix, ''), password, modifiers.get(suffix, ''))
